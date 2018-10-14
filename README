@@ -24,3 +24,17 @@ SOURCE CODE
 To modify the R code, go to the RTextTools folder, and modify files within the R directory. After making changes, ensure the package passes R CHECK using the following command:
 
 R CMD CHECK RTextTools
+
+BUILDING FROM SOURCE
+=====================
+
+If you're planning to use RTextTools in a R script you have to download and install devtools using 
+
+```R packages.install("devtools")```
+
+After installing devtools you just have to do:
+
+````R install_github("ronald245/RTextTools", subdir = "RTextTools")```
+This will  install RTextTools to your R library. after this is done you just have to do:
+
+````R library("RTextTools")"```
