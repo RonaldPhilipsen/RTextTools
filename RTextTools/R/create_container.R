@@ -7,8 +7,8 @@ create_container <- function(matrix, labels, trainSize = NULL, testSize = NULL, 
     column_names <- colnames(matrix)
     data_matrix <- as.compressed.matrix(matrix[totalSize,])
 
-    matrix_train_predict <- data_matrix[trainSize,]
-    matrix_test_predict <- data_matrix[testSize,]
+    matrix_train_predict <- as.compressed.matrix(data_matrix[trainSize,])
+    matrix_test_predict <- as.compressed.matrix(data_matrix[testSize,])
 
     train_code <- as.factor(labels[trainSize])
     if (length(unique(is.na(train_code))) > 1) stop("All data in the training set must have corresponding codes.")
