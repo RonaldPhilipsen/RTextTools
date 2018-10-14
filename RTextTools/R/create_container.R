@@ -1,12 +1,11 @@
 create_container <- function(matrix, labels, trainSize = NULL, testSize = NULL, virgin) {
-
     if (is.null(trainSize) && is.null(testSize)) stop("You must specify either a trainSize or testSize parameter, or both.")
     if (is.null(trainSize)) trainSize <- testSize
     if (is.null(testSize)) testSize <- trainSize
 
     totalSize <- sort(unique(append(trainSize, testSize)))
     column_names <- colnames(matrix)
-    data_matrix <- as.compressed.matrix(matrix)[totalSize]
+    data_matrix <- as.compressed.matrix(matrix[totalSize,])
 
     matrix_train_predict <- data_matrix[trainSize,]
     matrix_test_predict <- data_matrix[testSize,]
