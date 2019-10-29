@@ -30,18 +30,18 @@ BUILDING FROM SOURCE
 
 If you're planning to use RTextTools in a R script you have to download and install devtools using 
 
-```R 
+```R
 packages.install("devtools")
 ```
 
 After installing devtools you just have to do:
 
-```R 
-install_github("ronald245/RTextTools", subdir = "RTextTools")
+```R
+install_github("RonaldPhilipsen/RTextTools", subdir = "RTextTools")
 ```
 
 This will  install RTextTools to your R library. after this is done you just have to do:
 
-```R 
+```R
 library("RTextTools")"
 ```
